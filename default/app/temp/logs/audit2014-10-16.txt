@@ -1,0 +1,2 @@
+[Thu, 16 Oct 14 04:20:37 -0500][DEBUG] [/sistema/usuario/agregar/][admin][127.0.0.1] Se activa el acceso al usuario pepo. Motivo: Activado por registro inicial.
+[Thu, 16 Oct 14 04:20:37 -0500][DEBUG] [/sistema/usuario/agregar/][admin][127.0.0.1] Se ha registrado el usuario pepo en el sistema.

@@ -1,0 +1,99 @@
+<?php View::notify(); ?>
+
+<script type="text/javascript">
+    $(function() {
+        $('table').dwGrid({
+            order_attr: '<?php echo (APP_AJAX) ? 'class="dw-ajax dw-spinner"' : ''; ?>',
+            order_action: $.KumbiaPHP.publicPath+"bdt/demanda/listar/"
+        });
+    });
+</script>
+
+<div class="container-fluid dw-shell-view">
+
+    <?php View::process($page_module, $page_title, $set_title); ?>
+
+    <div class="btn-toolbar btn-toolbar-top">
+        <div class="btn-actions">
+            <?php echo DwHtml::button("bdt/demanda/create/", 'agregar', array('class'=>'btn-success'), 'check', APP_AJAX); ?>
+        </div>
+    </div>
+
+    <div class="dw-overflow">
+
+        <table class="table table-bordered table-hover table-striped table-condensed table-responsive">
+            <thead>
+                <tr>
+                    <th class="col-collapse" data-search="nombre">OFERTA</th>
+                    <th class="col-collapse" data-search="nombre">DETALLE</th>
+                    <th class="col-collapse" data-search="nombre">INGRESO</th>
+                    <th class="col-collapse" data-search="nombre">ESTADO</th>
+                    <th class="col-collapse" data-search="nombre">HORAS DISPONIBLES</th>
+                    <th class="col-collapse" data-search="nombre">EMAIL SOCIO</th>
+                    <th class="col-collapse" data-search="nombre">SOCIO</th>
+                    <th class="btn-actions no-responsive">ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($listItems->items as $item) : ?>
+                    <?php $key_show = DwSecurity::getKey($item->id, 'show_perfil'); ?>
+                    <?php $key_upd = DwSecurity::getKey($item->id, 'upd_perfil'); ?>
+                    <?php $key_inac = DwSecurity::getKey($item->id, 'inactivar_perfil'); ?>
+                    <?php $key_reac = DwSecurity::getKey($item->id, 'reactivar_perfil'); ?>
+                    <tr>
+                        <td><?php echo $item->getOferta()->nombre ?></td>
+                        <td><?php echo $item->detalle ?></td>
+                        <td><?php echo $item->ingreso_at ?></td>
+                        <td>
+                        <?php
+                        switch ($item->estado) {
+                        	case "A":
+                        		$txt_estado = "Aceptada";break;
+                        	case "R":
+                        		$txt_estado = "Rechazada";break;
+                        	case "D":
+                        		$txt_estado = "Denunciada";break;
+                        	case "I":
+                        		$txt_estado = "Ingresada";break;
+                        	case "E":
+                        		$txt_estado = "En proceso";break;                        		
+                        	case "C":
+                        		$txt_estado = "Cancelada";break;
+                        	case "F":
+                        		$txt_estado = "Finalizada";break;
+                        }                        
+                        echo $txt_estado ?>
+                        </td>                        
+                        <td><?php echo $item->horas ?></td>
+                        <td><?php echo $item->getUsuario()->email ?></td>
+                        <td><img src="http://localhost/bdt/default/img/upload/personas/<?php echo $item->getUsuario()->getPersona()->fotografia ?>"></img></td>
+                        <td>
+                        <?php
+                        switch ($item->estado) {
+                        	case "A":
+                            	echo DwHtml::buttonTable('Cancelar Demanda', "bdt/demanda/cancelar/$key_upd/",array('class'=>'js-confirm', 'confirm-title'=>'Cancelar Demanda', 'confirm-body'=>'Está seguro de cancelar la demanda? <br />Recuerda que esta operación no se puede reversar.'), 'danger', 'ban-circle');
+                            	echo DwHtml::buttonTable('Finalizar Demanda', "bdt/demanda/finalizar/$key_upd/",array('class'=>'js-confirm', 'confirm-title'=>'Finalizar Demanda', 'confirm-body'=>'Está seguro de finalizar la demanda? <br />Esta operación actualizará los saldos de horas.'), 'success', 'thumbs-up');
+                            	break;
+                        	case "D":
+                        		break;
+                        	case "I":
+                            	echo DwHtml::buttonTable('Ver Demanda', "bdt/demanda/edit/$key_show/", null, 'info', 'edit');
+                            	echo DwHtml::buttonTable('Eliminar Demanda', "bdt/demanda/del/$key_upd/",array('class'=>'js-confirm', 'confirm-title'=>'Eliminar Demanda', 'confirm-body'=>'Está seguro de eliminar la demanda? <br />Recuerda que esta operación no se puede reversar.'), 'danger', 'ban-circle');
+                        		break;
+                        	case "C":
+                        		break;
+                        	case "F":
+                        		break;
+                        }                        
+                        ?>                        
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+
+    </div>
+
+    <?php View::partial('paginators/default', false, array('page'=>$listItems, 'url'=>"bdt/demanda/listar/$order/")); ?>
+
+</div>

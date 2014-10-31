@@ -1,0 +1,2 @@
+[Mon, 20 Oct 14 04:02:42 -0500][INFO] [/sistema/configuracion/index/][admin][127.0.0.1] Se ha actualizado el archivo de configuración del sistema.
+[Mon, 20 Oct 14 04:02:42 -0500][INFO] [/sistema/configuracion/index/][admin][127.0.0.1] Se ha actualizado el archivo de configuración del sistema.

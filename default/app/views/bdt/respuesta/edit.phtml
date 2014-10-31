@@ -1,0 +1,39 @@
+<?php View::notify(); ?>
+
+<div class="container-fluid dw-shell-view">
+
+    <?php View::process($page_module, $page_title, $set_title); ?>
+
+    <?php echo DwForm::open('', 'post', array('id' => 'form', 'class' => 'dw-validate')); ?>
+
+    <div class="row-fluid">
+        <div class="span4">
+            <?php echo DwForm::dbSelect('respuesta.solicitud_id', 'nombre', array('bdt/solicitud', 'getItems'), NULL, array('class' => 'input-xxlarge input-required mask-pint show-errors'), Session::get('id_solicitud'), 'Solicitud'); ?>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span4">
+            <?php echo DwForm::text('respuesta.horas', array('class' => 'mask-alphanum show-error'), NULL, 'Cantidad de horas'); ?>
+        </div>
+    </div>    
+
+    <div class="row-fluid">
+        <div class="span4">
+            <?php echo DwForm::textarea('respuesta.detalle', array('class' => 'mask-alphanum show-error'), NULL, 'Detalle'); ?>
+        </div>
+    </div>
+        
+    
+    <div class="row-fluid">
+        <div class="form-actions">
+            <?php echo DwButton::save('Guardar Respuesta'); ?>
+            <?php echo DwButton::reset('form'); ?>
+            <?php echo DwButton::cancel('bdt/respuesta/listar/'); ?>
+        </div>
+    </div>
+    <?php echo DwForm::hiddenKey('respuesta.id', $respuesta->id); ?>
+    <?php echo DwForm::hiddenKey('respuesta.usuario_id', Session::get('id_us')); ?>
+    <?php echo DwForm::close(); ?>
+
+</div>

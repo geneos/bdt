@@ -1,0 +1,54 @@
+<?php View::notify(); ?>
+
+<script type="text/javascript">
+    $(function() {
+        $('table').dwGrid({
+            order_attr: '<?php echo (APP_AJAX) ? 'class="dw-ajax dw-spinner"' : ''; ?>',
+            order_action: $.KumbiaPHP.publicPath+"bdt/categoriadetrabajo/listar/"
+        });
+    });
+</script>
+
+<div class="container-fluid dw-shell-view">
+
+    <?php View::process($page_module, $page_title, $set_title); ?>
+
+    <div class="btn-toolbar btn-toolbar-top">
+        <div class="btn-actions">
+            <?php echo DwHtml::button("bdt/categoriadetrabajo/create/", 'agregar', array('class'=>'btn-success'), 'check', APP_AJAX); ?>
+        </div>
+    </div>
+
+    <div class="dw-overflow">
+
+        <table class="table table-bordered table-hover table-striped table-condensed table-responsive">
+            <thead>
+                <tr>
+                    <th class="col-collapse" data-search="nombre">NOMBRE</th>
+                    <th class="col-collapse" data-search="nombre">IMAGEN</th>
+                    <th class="btn-actions no-responsive">ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($listItems->items as $item) : ?>
+                    <?php $key_show = DwSecurity::getKey($item->id, 'show_perfil'); ?>
+                    <?php $key_upd = DwSecurity::getKey($item->id, 'upd_perfil'); ?>
+                    <?php $key_inac = DwSecurity::getKey($item->id, 'inactivar_perfil'); ?>
+                    <?php $key_reac = DwSecurity::getKey($item->id, 'reactivar_perfil'); ?>
+                    <tr>
+                        <td><?php echo $item->nombre ?></td>
+                        <td><?php echo $item->fotografia ?></td>
+                        <td>
+                            <?php echo DwHtml::buttonTable('Ver categoria', "bdt/categoriadetrabajo/edit/$key_show/", null, 'info', 'edit'); ?>
+                            <?php echo DwHtml::buttonTable('Eliminar categoria', "bdt/categoriadetrabajo/del/$key_upd/",array('class'=>'js-confirm', 'confirm-title'=>'Eliminar categoría', 'confirm-body'=>'Está seguro de eliminar esta categoría? <br />Recuerda que esta operación no se puede reversar.'), 'danger', 'ban-circle'); ?>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+
+    </div>
+
+    <?php View::partial('paginators/default', false, array('page'=>$listItems, 'url'=>"bdt/categoriadetrabajo/listar/$order/")); ?>
+
+</div>

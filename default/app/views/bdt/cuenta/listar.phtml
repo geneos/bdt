@@ -1,0 +1,66 @@
+<?php View::notify(); ?>
+
+<script type="text/javascript">
+    $(function() {
+        $('table').dwGrid({
+            order_attr: '<?php echo (APP_AJAX) ? 'class="dw-ajax dw-spinner"' : ''; ?>',
+            order_action: $.KumbiaPHP.publicPath+"bdt/cuenta/listar/"
+        });
+    });
+</script>
+
+<div class="container-fluid dw-shell-view">
+
+    <?php View::process($page_module, $page_title, $set_title); ?>
+
+
+    <div class="dw-overflow">
+
+        <table class="table table-bordered table-hover table-striped table-condensed table-responsive">
+            <thead>
+                <tr>
+                    <th class="col-collapse" data-search="nombre">FECHA</th>
+                    <th class="col-collapse" data-search="nombre">REFERENCIA</th>
+                    <th class="col-collapse" data-search="nombre">DEBE</th>
+                    <th class="col-collapse" data-search="nombre">HABER</th>
+                    <th class="col-collapse" data-search="nombre">SALDO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($listItems->items as $item) : ?>
+                    <?php $key_show = DwSecurity::getKey($item->id, 'show_perfil'); ?>
+                    <?php $key_upd = DwSecurity::getKey($item->id, 'upd_perfil'); ?>
+                    <?php $key_inac = DwSecurity::getKey($item->id, 'inactivar_perfil'); ?>
+                    <?php $key_reac = DwSecurity::getKey($item->id, 'reactivar_perfil'); ?>
+                    <tr>
+                        <td><?php echo $item->ingreso_at ?></td>
+                        <td>
+                        <?php
+                        if ($item->oferta_id != null)
+                        	$txt_ref = "Oferta " . $item->oferta_id;
+                        else if ($item->demanda_id != null)
+                        	$txt_ref = "Demanda " . $item->demanda_id;
+                        else if ($item->solicitud_id != null)
+                        	$txt_ref = "Solicitud " . $item->solicitud_id;
+                        else if ($item->respuesta_id != null)
+                        	$txt_ref = "Respuesta " . $item->respuesta_id;
+                        else
+                        	$txt_ref = "ERROR";
+                        echo $txt_ref ?>                        
+                        </td>
+                        <td><?php echo $item->debe ?></td>
+                        <td><?php echo $item->haber ?></td>
+                        <td><?php echo $item->saldo ?></td>
+                  	</tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+
+    </div>
+
+    <?php View::process("Saldo Cuenta Corriente: " . $saldo, "" , ""); ?>
+   
+    <?php View::partial('paginators/default', false, array('page'=>$listItems, 'url'=>"bdt/cuenta/listar/$order/")); ?>
+ 
+    
+</div>

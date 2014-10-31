@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="core/console"/>
+	<buildpathentry kind="src" path="core/extensions/helpers"/>
+	<buildpathentry kind="src" path="core/kumbia"/>
+	<buildpathentry kind="src" path="core/libs/acl"/>
+	<buildpathentry kind="src" path="core/libs/acl2"/>
+	<buildpathentry kind="src" path="core/libs/auth"/>
+	<buildpathentry kind="src" path="core/libs/auth2"/>
+	<buildpathentry kind="src" path="core/libs/benchmark"/>
+	<buildpathentry kind="src" path="core/libs/cache"/>
+	<buildpathentry kind="src" path="core/libs/date"/>
+	<buildpathentry kind="src" path="core/libs/db"/>
+	<buildpathentry kind="src" path="core/libs/deprecated"/>
+	<buildpathentry kind="src" path="core/libs/event"/>
+	<buildpathentry kind="src" path="core/libs/filter"/>
+	<buildpathentry kind="src" path="core/libs/i18n"/>
+	<buildpathentry kind="src" path="core/libs/input"/>
+	<buildpathentry kind="src" path="core/libs/kumbia_active_record"/>
+	<buildpathentry kind="src" path="core/libs/logger"/>
+	<buildpathentry kind="src" path="core/libs/redirect"/>
+	<buildpathentry kind="src" path="core/libs/registry"/>
+	<buildpathentry kind="src" path="core/libs/report"/>
+	<buildpathentry kind="src" path="core/libs/rest"/>
+	<buildpathentry kind="src" path="core/libs/security"/>
+	<buildpathentry kind="src" path="core/libs/session"/>
+	<buildpathentry kind="src" path="core/libs/upload"/>
+	<buildpathentry kind="src" path="core/libs/validate"/>
+	<buildpathentry kind="src" path="core/tests"/>
+	<buildpathentry kind="src" path="core/views/errors"/>
+	<buildpathentry kind="src" path="core/views/partials/paginators"/>
+	<buildpathentry kind="src" path="core/views/templates"/>
+	<buildpathentry kind="src" path="default"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+</buildpath>

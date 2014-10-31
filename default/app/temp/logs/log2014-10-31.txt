@@ -1,0 +1,378 @@
+[Fri, 31 Oct 14 06:57:31 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 06:57:31 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 06:57:34 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 06:57:34 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 06:57:35 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 06:57:35 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 06:57:35 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 06:57:35 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 06:57:35 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 06:57:35 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 06:57:35 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 06:57:35 -0500][DEBUG] SELECT COUNT(*) FROM oferta  WHERE oferta.usuario_id != 3 and oferta.id IS NOT NULL
+[Fri, 31 Oct 14 06:57:35 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE oferta.usuario_id != 3 and oferta.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 06:57:35 -0500][DEBUG] DESCRIBE `solicitud`
+[Fri, 31 Oct 14 06:57:35 -0500][DEBUG] SELECT COUNT(*) FROM solicitud  WHERE solicitud.usuario_id != 3 and solicitud.id IS NOT NULL
+[Fri, 31 Oct 14 06:57:35 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM solicitud WHERE solicitud.usuario_id != 3 and solicitud.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 06:57:43 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 06:57:43 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:00:37 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:00:37 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:00:37 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:00:37 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:00:37 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:00:37 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:00:37 -0500][DEBUG] DESCRIBE `categoriadetrabajo`
+[Fri, 31 Oct 14 07:00:37 -0500][DEBUG] SELECT id,nombre,detalle,estado,fotografia FROM categoriadetrabajo WHERE categoriadetrabajo.id IS NOT NULL
+[Fri, 31 Oct 14 07:00:54 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:00:54 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:00:54 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:00:54 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:00:54 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:00:54 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:00:54 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 07:00:54 -0500][DEBUG] INSERT INTO oferta (nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas) VALUES ('Prueba','1','3','2014-10-31 7:00:54',NULL,'XXXX','I','10')
+[Fri, 31 Oct 14 07:00:54 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE id = 4 LIMIT 1
+[Fri, 31 Oct 14 07:02:20 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:02:20 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:02:22 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:02:22 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:02:22 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:02:22 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:02:22 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:02:22 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:02:22 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:02:22 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:02:22 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 07:02:22 -0500][DEBUG] SELECT COUNT(*) FROM oferta  WHERE oferta.usuario_id != 3 and oferta.id IS NOT NULL
+[Fri, 31 Oct 14 07:02:22 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE oferta.usuario_id != 3 and oferta.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:02:22 -0500][DEBUG] DESCRIBE `solicitud`
+[Fri, 31 Oct 14 07:02:22 -0500][DEBUG] SELECT COUNT(*) FROM solicitud  WHERE solicitud.usuario_id != 3 and solicitud.id IS NOT NULL
+[Fri, 31 Oct 14 07:02:22 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM solicitud WHERE solicitud.usuario_id != 3 and solicitud.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:02:24 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:02:24 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:02:24 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:02:24 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:02:24 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:02:24 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:02:24 -0500][DEBUG] DESCRIBE `categoriadetrabajo`
+[Fri, 31 Oct 14 07:02:24 -0500][DEBUG] SELECT id,nombre,detalle,estado,fotografia FROM categoriadetrabajo WHERE categoriadetrabajo.id IS NOT NULL
+[Fri, 31 Oct 14 07:02:34 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:02:34 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:02:34 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:02:34 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:02:34 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:02:34 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:02:34 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 07:02:34 -0500][DEBUG] INSERT INTO oferta (nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas) VALUES ('Prueba','2','3','2014-10-31 7:02:34',NULL,'XX','I','10')
+[Fri, 31 Oct 14 07:02:34 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE id = 5 LIMIT 1
+[Fri, 31 Oct 14 07:02:42 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:02:42 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:02:42 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:02:42 -0500][DEBUG] SELECT COUNT(*) FROM oferta  WHERE oferta.usuario_id != 3 and oferta.id IS NOT NULL
+[Fri, 31 Oct 14 07:02:42 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE oferta.usuario_id != 3 and oferta.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:02:47 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:02:47 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:02:47 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:02:47 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:02:47 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:02:47 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:02:47 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 07:02:47 -0500][DEBUG] SELECT COUNT(*) FROM oferta  WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL
+[Fri, 31 Oct 14 07:02:47 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:02:47 -0500][DEBUG] DESCRIBE `usuario`
+[Fri, 31 Oct 14 07:02:47 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:02:47 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:30:07 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:30:07 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:30:07 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:30:07 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:30:07 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:30:07 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:30:07 -0500][DEBUG] DESCRIBE `categoriadetrabajo`
+[Fri, 31 Oct 14 07:30:07 -0500][DEBUG] SELECT id,nombre,detalle,estado,fotografia FROM categoriadetrabajo WHERE categoriadetrabajo.id IS NOT NULL
+[Fri, 31 Oct 14 07:30:27 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:30:27 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:30:27 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:30:27 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:30:27 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:30:27 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:30:27 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 07:30:27 -0500][DEBUG] INSERT INTO oferta (nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas) VALUES ('Prueba Completa','1','3','2014-10-31 7:30:27',NULL,'XXX','I','10')
+[Fri, 31 Oct 14 07:30:27 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE id = 6 LIMIT 1
+[Fri, 31 Oct 14 07:30:27 -0500][DEBUG] DESCRIBE `usuario`
+[Fri, 31 Oct 14 07:30:27 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = '3' LIMIT 1
+[Fri, 31 Oct 14 07:30:27 -0500][DEBUG] DESCRIBE `persona`
+[Fri, 31 Oct 14 07:30:27 -0500][DEBUG] SELECT id,nombre,apellido,nuip,tipo_nuip_id,telefono,fotografia,registrado_at,modificado_in FROM persona WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:30:27 -0500][DEBUG] SELECT id,nombre,apellido,nuip,tipo_nuip_id,telefono,fotografia,registrado_at,modificado_in FROM persona WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:30:34 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:30:34 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:30:34 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:30:34 -0500][DEBUG] SELECT COUNT(*) FROM oferta  WHERE oferta.usuario_id != 3 and oferta.id IS NOT NULL
+[Fri, 31 Oct 14 07:30:34 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE oferta.usuario_id != 3 and oferta.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:35:49 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:35:49 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:35:49 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:35:49 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:35:49 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:35:49 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:35:49 -0500][DEBUG] DESCRIBE `categoriadetrabajo`
+[Fri, 31 Oct 14 07:35:49 -0500][DEBUG] SELECT id,nombre,detalle,estado,fotografia FROM categoriadetrabajo WHERE categoriadetrabajo.id IS NOT NULL
+[Fri, 31 Oct 14 07:35:58 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:35:58 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:35:58 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:35:58 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:35:58 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:35:58 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:35:58 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 07:35:58 -0500][DEBUG] INSERT INTO oferta (nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas) VALUES ('Prueba','3','3','2014-10-31 7:35:58',NULL,'XXX','I','12')
+[Fri, 31 Oct 14 07:35:58 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE id = 7 LIMIT 1
+[Fri, 31 Oct 14 07:35:58 -0500][DEBUG] DESCRIBE `usuario`
+[Fri, 31 Oct 14 07:35:58 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = '3' LIMIT 1
+[Fri, 31 Oct 14 07:35:58 -0500][DEBUG] DESCRIBE `persona`
+[Fri, 31 Oct 14 07:35:58 -0500][DEBUG] SELECT id,nombre,apellido,nuip,tipo_nuip_id,telefono,fotografia,registrado_at,modificado_in FROM persona WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:35:58 -0500][DEBUG] SELECT id,nombre,apellido,nuip,tipo_nuip_id,telefono,fotografia,registrado_at,modificado_in FROM persona WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:36:05 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:36:05 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:36:05 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:36:05 -0500][DEBUG] SELECT COUNT(*) FROM oferta  WHERE oferta.usuario_id != 3 and oferta.id IS NOT NULL
+[Fri, 31 Oct 14 07:36:05 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE oferta.usuario_id != 3 and oferta.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:46:30 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:46:30 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:46:30 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:46:30 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:46:30 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:46:30 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:46:30 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 07:46:30 -0500][DEBUG] SELECT COUNT(*) FROM oferta  WHERE oferta.usuario_id != 3 and oferta.id IS NOT NULL
+[Fri, 31 Oct 14 07:46:30 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE oferta.usuario_id != 3 and oferta.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:46:35 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:46:35 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:46:35 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:46:35 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:46:35 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:46:35 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:46:35 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 07:46:35 -0500][DEBUG] SELECT COUNT(*) FROM oferta  WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL
+[Fri, 31 Oct 14 07:46:35 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:46:35 -0500][DEBUG] DESCRIBE `usuario`
+[Fri, 31 Oct 14 07:46:35 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:35 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:35 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:35 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:40 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:46:40 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:46:41 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:46:41 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:46:41 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:46:41 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:46:41 -0500][DEBUG] DESCRIBE `solicitud`
+[Fri, 31 Oct 14 07:46:41 -0500][DEBUG] DELETE FROM solicitud WHERE id = '7'
+[Fri, 31 Oct 14 07:46:41 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:46:41 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:46:41 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:46:41 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:46:41 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:46:41 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:46:41 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:46:41 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:46:41 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:46:41 -0500][DEBUG] DESCRIBE `solicitud`
+[Fri, 31 Oct 14 07:46:41 -0500][DEBUG] SELECT COUNT(*) FROM solicitud  WHERE solicitud.usuario_id != 3 and solicitud.id IS NOT NULL
+[Fri, 31 Oct 14 07:46:41 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM solicitud WHERE solicitud.usuario_id != 3 and solicitud.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:46:43 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:46:43 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:46:43 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:46:43 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:46:43 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:46:43 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:46:43 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 07:46:43 -0500][DEBUG] SELECT COUNT(*) FROM oferta  WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL
+[Fri, 31 Oct 14 07:46:43 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:46:43 -0500][DEBUG] DESCRIBE `usuario`
+[Fri, 31 Oct 14 07:46:43 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:43 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:43 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:43 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] DESCRIBE `solicitud`
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] DELETE FROM solicitud WHERE id = '7'
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] DESCRIBE `solicitud`
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] SELECT COUNT(*) FROM solicitud  WHERE solicitud.usuario_id != 3 and solicitud.id IS NOT NULL
+[Fri, 31 Oct 14 07:46:47 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM solicitud WHERE solicitud.usuario_id != 3 and solicitud.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:46:49 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:46:49 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:46:49 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:46:49 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:46:49 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:46:49 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:46:49 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 07:46:49 -0500][DEBUG] SELECT COUNT(*) FROM oferta  WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL
+[Fri, 31 Oct 14 07:46:49 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:46:49 -0500][DEBUG] DESCRIBE `usuario`
+[Fri, 31 Oct 14 07:46:49 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:49 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:49 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:49 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:50 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:46:50 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:46:50 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:46:50 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:46:50 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:46:50 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:46:50 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 07:46:50 -0500][DEBUG] SELECT COUNT(*) FROM oferta  WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL
+[Fri, 31 Oct 14 07:46:50 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:46:50 -0500][DEBUG] DESCRIBE `usuario`
+[Fri, 31 Oct 14 07:46:50 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:50 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:50 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:50 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:52 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:46:52 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:46:52 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:46:52 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:46:52 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:46:52 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:46:52 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 07:46:52 -0500][DEBUG] SELECT COUNT(*) FROM oferta  WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL
+[Fri, 31 Oct 14 07:46:52 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:46:52 -0500][DEBUG] DESCRIBE `usuario`
+[Fri, 31 Oct 14 07:46:52 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:52 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:52 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:46:52 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] DESCRIBE `solicitud`
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] DELETE FROM solicitud WHERE id = '4'
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] DESCRIBE `solicitud`
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] SELECT COUNT(*) FROM solicitud  WHERE solicitud.usuario_id != 3 and solicitud.id IS NOT NULL
+[Fri, 31 Oct 14 07:47:00 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM solicitud WHERE solicitud.usuario_id != 3 and solicitud.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT COUNT(*) FROM oferta  WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] DESCRIBE `usuario`
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT COUNT(*) FROM oferta  WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] DESCRIBE `usuario`
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:02 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] DESCRIBE `demanda`
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] SELECT COUNT(*) FROM demanda  WHERE demanda.id IS NOT NULL and demanda.oferta_id in (select of.id from oferta of where of.usuario_id = 3)
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] SELECT id,oferta_id,ingreso_at,actualizacion_in,detalle,estado,usuario_id,horas FROM demanda WHERE demanda.id IS NOT NULL and demanda.oferta_id in (select of.id from oferta of where of.usuario_id = 3) LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] DESCRIBE `demanda`
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] SELECT COUNT(*) FROM demanda  WHERE demanda.usuario_id = 3 and demanda.id IS NOT NULL
+[Fri, 31 Oct 14 07:47:05 -0500][DEBUG] SELECT id,oferta_id,ingreso_at,actualizacion_in,detalle,estado,usuario_id,horas FROM demanda WHERE demanda.usuario_id = 3 and demanda.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:47:06 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:47:06 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:47:06 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:47:06 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:47:06 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:47:06 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:47:06 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 07:47:06 -0500][DEBUG] SELECT COUNT(*) FROM oferta  WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL
+[Fri, 31 Oct 14 07:47:06 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:47:06 -0500][DEBUG] DESCRIBE `usuario`
+[Fri, 31 Oct 14 07:47:06 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:06 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:06 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:06 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:07 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:47:07 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:47:07 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:47:07 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:47:07 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:47:07 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:47:07 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 07:47:07 -0500][DEBUG] SELECT COUNT(*) FROM oferta  WHERE oferta.usuario_id != 3 and oferta.id IS NOT NULL
+[Fri, 31 Oct 14 07:47:07 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE oferta.usuario_id != 3 and oferta.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:47:08 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:47:08 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:47:08 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:47:08 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:47:08 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:47:08 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:47:08 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 07:47:08 -0500][DEBUG] SELECT COUNT(*) FROM oferta  WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL
+[Fri, 31 Oct 14 07:47:08 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:47:08 -0500][DEBUG] DESCRIBE `usuario`
+[Fri, 31 Oct 14 07:47:08 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:08 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:08 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:08 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:09 -0500][DEBUG] DESCRIBE `empresa`
+[Fri, 31 Oct 14 07:47:09 -0500][DEBUG] SELECT empresa.*, tipo_nuip.tipo_nuip FROM empresa INNER JOIN tipo_nuip ON tipo_nuip.id = empresa.tipo_nuip_id WHERE empresa.id IS NOT NULL ORDER BY empresa.registrado_at DESC LIMIT 1
+[Fri, 31 Oct 14 07:47:09 -0500][DEBUG] DESCRIBE `perfil`
+[Fri, 31 Oct 14 07:47:09 -0500][DEBUG] SELECT perfil.*, COUNT(usuario.id) AS usuarios FROM perfil LEFT JOIN usuario ON perfil.id = usuario.perfil_id  WHERE perfil.id IS NOT NULL AND perfil.estado = 1 GROUP BY perfil.id ORDER BY perfil  ASC
+[Fri, 31 Oct 14 07:47:09 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '2'
+[Fri, 31 Oct 14 07:47:09 -0500][DEBUG] SELECT recurso.* FROM perfil INNER JOIN recurso_perfil ON perfil.id = recurso_perfil.perfil_id INNER JOIN recurso ON recurso.id = recurso_perfil.recurso_id  WHERE perfil.id = '1'
+[Fri, 31 Oct 14 07:47:09 -0500][DEBUG] DESCRIBE `oferta`
+[Fri, 31 Oct 14 07:47:09 -0500][DEBUG] SELECT COUNT(*) FROM oferta  WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL
+[Fri, 31 Oct 14 07:47:09 -0500][DEBUG] SELECT id,nombre,categoriadetrabajo_id,usuario_id,ingreso_at,actualizacion_in,detalle,estado,horas FROM oferta WHERE oferta.usuario_id = 3 and oferta.id IS NOT NULL LIMIT 30 OFFSET 0
+[Fri, 31 Oct 14 07:47:09 -0500][DEBUG] DESCRIBE `usuario`
+[Fri, 31 Oct 14 07:47:09 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:09 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:09 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
+[Fri, 31 Oct 14 07:47:09 -0500][DEBUG] SELECT id,sucursal_id,persona_id,login,password,perfil_id,email,tema,app_ajax,datagrid,registrado_at,modificado_in FROM usuario WHERE id = 3 LIMIT 1
